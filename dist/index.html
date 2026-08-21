@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOTE — Mixture of Task Experts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Syne:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/assets/index-NiPA7NiS.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D9Trai2Q.css">
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="c"></canvas>
+      <div class="vignette"></div>
+      <div class="grain"></div>
+
+      <div id="loader">
+        <div class="loader-mark">MOTE</div>
+        <div class="loader-bar"><i></i></div>
+        <div class="loader-caption">assembling task experts</div>
+      </div>
+
+      <header class="hud-top">
+        <div class="brand">
+          <span class="brand-kicker">Mixture of Task Experts</span>
+          <h1>MOTE</h1>
+        </div>
+        <div class="chapter">
+          <span id="chapter-idx">01</span>
+          <span class="chapter-div">/</span>
+          <span>09</span>
+        </div>
+      </header>
+
+      <div class="hud-legend" id="legend">
+        <div class="legend-title">Task experts · one per sample</div>
+        <ul id="expert-list"></ul>
+      </div>
+
+      <footer class="hud-bottom">
+        <div class="controls">
+          <button id="btn-play" type="button" aria-label="Pause">Pause</button>
+          <button id="btn-explore" type="button">Explore</button>
+        </div>
+        <div class="caption-block">
+          <p id="caption"></p>
+          <div class="scrub" id="scrub">
+            <div class="scrub-fill" id="scrub-fill"></div>
+          </div>
+        </div>
+        <div class="hint">Space pause · ← → chapters · E explore</div>
+      </footer>
+    </div>
+  </body>
+</html>
